@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  font-family: 'Signika', sans-serif;
+  font-size: 10px;
+  overflow-x: hidden;
+  --text-color: #e2f3f5;
+  --text-Darkblue: #3d5af1;
+  --text-blue: #22d1ee;
+  --text-inverse: #0e153a;
+  --white: #fafafafa;
+  background-color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-blue);
+  transition: 0.2s ease-in-out;
+}
+
+h6 {
+  font-size: 18px;
+  color: var(--text-inverse);
+  margin-top: 5px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.search_wrap,
+.timezone-section,
+.weekly-forecast-section,
+.down-section {
+  margin: 10px 0px;
+}
+
+.down-section {
+  margin-bottom: 0;
+}
+
+.search_wrap {
+  margin-top: 0;
+}
+
+/*styling thecontainer --------*/
+.container {
+  position: relative;
+  width: 700px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 30px;
+  background-color: var(--text-color);
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+  border-radius: 20px;
+  background-image: url(morning.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* styling the timezone section -----*/
+
+.timezone-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*styling the timezone itself */
+.timezone {
+  font-size: 22px;
+  color: var(--text-inverse);
+  letter-spacing: 1px;
+}
+
+/* styling the weekly forecast section--------------*/
+.weekly-forecast-section {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*styling the weekly forecast cotaiers */
+.forecast-container {
+  position: relative;
+  width: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1px;
+  transition: 0.2s ease-in-out;
+}
+.forecast-container:hover {
+  -webkit-box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+}
+.border {
+  border-radius: 15px;
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+}
+.forecast-container h6 {
+  letter-spacing: 1px;
+}
+
+/* styling the degree in the forecast container*/
+.forecast-container-degree span {
+  font-size: 14px;
+  color: var(--text-inverse);
+}
+
+.swiper-container {
+  width: 100%;
+  overflow: visible !important;
+  transform: translateX(-160px);
+  transition: 0.2s;
+}
+
+.swiper-slide {
+  width: 115px;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide:nth-child(1) {
+  opacity: 0;
+  display: none;
+  transition: 0.2s ease-in-out;
+  width: 115px;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* styling the down section ------*/
+
+.down-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.down-section-container-1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*styling the weather icons section----------------*/
+
+.icon-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 120px;
+  margin-bottom: 30px;
+}
+
+/* styling the degree and the description section---------*/
+
+.degree-and-description-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.degree {
+  position: relative;
+  font-size: 48px;
+  color: var(--text-inverse);
+  margin-bottom: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+.degree:hover {
+  color: var(--text-blue);
+}
+
+.description {
+  position: relative;
+  font-size: 18px;
+  color: var(--text-inverse);
+  letter-spacing: 1px;
+}
+
+/* styling the other ifno section ----------*/
+
+.other-info-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  width: 60%;
+  height: 100%;
+  background-color: var(--text-blue);
+  border-radius: 15px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 10px 19px -4px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 10px 19px -4px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 10px 19px -4px rgba(0, 0, 0, 0.29);
+}
+
+.other-info-container {
+  position: relative;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rgb(212, 225, 228); */
+  background-color: var(--text-color);
+  -webkit-box-shadow: 0px 10px 19px -10px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 10px 19px -10px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 10px 19px -10px rgba(0, 0, 0, 0.29);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.other-info-container:hover {
+  box-shadow: none;
+}
+
+.box3 {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.box3 div {
+  text-align: center;
+}
+
+.other-info-container h6 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-inverse);
+  margin-bottom: 10px;
+}
+
+.other-info-container span {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-inverse);
+}
+
+.container-2 {
+  position: absolute;
+  bottom: 0;
+  background: var(--text-blue);
+  height: 40vh;
+  width: 100%;
+  transform: rotate(180deg);
+}
+
+/* styling tedark mode button ---------*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: 30px;
+  left: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 5px;
+  right: 0;
+  bottom: 0;
+  background-color: #22d1ee;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: #3d5af1;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0e153a;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.icon-section img {
+  width: 250px;
+  height: auto;
+}
+
+/* styling the search input  ----------*/
+
+.container .input {
+  border: 0;
+  outline: none;
+  color: #8b7d77;
+  -webkit-box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 3px 19px -5px rgba(0, 0, 0, 0.19);
+}
+
+.search_wrap {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.search_wrap .search_box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.search_wrap .search_box .input {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.search_wrap .search_box .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background: var(--text-blue);
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.search_wrap .search_box .btn:hover {
+  background: var(--text-blue);
+}
+
+.search_wrap .search_box .btn.btn_common .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+}
+
+.search_wrap.search_wrap_3 .search_box .input {
+  padding-right: 80px;
+}
+
+.search_wrap.search_wrap_2 .search_box .input {
+  padding-left: 80px;
+}
+
+.search_wrap.search_wrap_3 .search_box .input {
+  border-radius: 50px;
+}
+
+.search_wrap.search_wrap_3 .search_box .btn {
+  right: 0px;
+  border-radius: 50%;
+}
+
+.search_wrap .search_box .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search_wrap {
+  position: relative;
+  right: 8px;
+  bottom: 15px;
+  width: 60%;
+  top: 5px;
+}
+
+.down-section {
+  align-items: center;
+}
+
+.other-info-section {
+  width: 95%;
+  position: relative;
+  z-index: 998;
+  transition: 0.5s ease-in-out;
+  height: 300px;
+}
